@@ -1,43 +1,61 @@
-# Astro Starter Kit: Minimal
+# BirdPedy Web
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Landing page oficial de **BirdPedy**, la app de birding/pajareo para el avistamiento y registro de aves en España.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Esta web está construida con **Astro** y **Tailwind CSS (v4)** y está pensada como una landing ligera, rápida y optimizada para SEO, orientada a llevar tráfico hacia la app de Android en Google Play.
 
-## 🚀 Project Structure
+---
 
-Inside of your Astro project, you'll see the following folders and files:
+## ✨ Características principales
 
-```text
+- **Landing multidioma**: contenido en **español** e **inglés**, con interruptor ES/EN.
+- **Diseño responsive** con layout claro:
+  - Hero con call‑to‑action principal.
+  - Sección de características.
+  - Novedades destacadas (rareza, integración con iNaturalist y eBird).
+  - Sección “Cómo funciona”.
+  - Galería de capturas (ES/EN).
+  - Sección de Instagram.
+  - Preguntas frecuentes (FAQ) y CTA final.
+- **SEO técnico**:
+  - Meta tags básicas (`title`, `description`, Open Graph).
+  - `JSON-LD` de tipo `FAQPage` (FAQ enriquecido).
+  - `JSON-LD` de tipo `MobileApplication` (app para Android).
+- **Estilo visual**:
+  - Tema claro con fondo blanco.
+  - Color principal verde `#6F986B` (color de BirdPedy).
+  - Tipografía y espaciados pensados para lectura cómoda.
+- **Sin frameworks de UI pesados**: solo Astro, Tailwind y un poco de JS vanilla para el cambio de idioma.
+
+---
+
+## 🛠 Stack técnico
+
+- [Astro](https://astro.build/)
+- [Tailwind CSS v4](https://tailwindcss.com/)
+- HTML/JS/CSS estándar
+- Sin backend (web estática)
+
+---
+
+## 📁 Estructura básica del proyecto
+
+```bash
 /
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+├─ public/
+│  ├─ birdpedy-screenshot-1.png   # mockup del móvil en el hero
+│  ├─ screens-es-1.png ... 6.png  # capturas en español
+│  ├─ screens-en-1.png ... 6.png  # capturas en inglés
+│  ├─ ig-1.jpg, ig-2.jpg, ig-3.jpg# imágenes para la sección de Instagram
+│  └─ (opcional) birdpedy-logo.svg, og-image.jpg, etc.
+├─ src/
+│  ├─ layouts/
+│  │  └─ Layout.astro             # layout principal (header, footer, SEO)
+│  ├─ pages/
+│  │  └─ index.astro              # landing principal
+│  └─ styles/
+│     └─ global.css               # Tailwind + estilos globales
+├─ astro.config.mjs
+├─ tailwind.config.mjs
+├─ package.json
+└─ README.md

@@ -1,164 +1,198 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
 
 const {
-  title = 'BirdPedy – Birding app for Spain',
-  description = 'Explore, log and share your bird sightings in Spain with BirdPedy.',
+    title = "BirdPedy – Birding app for Spain",
+    description = "Explore, log and share your bird sightings in Spain with BirdPedy.",
 } = Astro.props;
 ---
 
 <html lang="es" data-lang="es" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <title>{title}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content={description} />
+    <head>
+        <meta charset="UTF-8" />
+        <title>{title}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content={description} />
 
-    <!-- SEO básico / redes sociales -->
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
-    <!-- Cambia esta URL por la real de tu dominio -->
-    <meta property="og:url" content="https://tudominio.com" />
-    <!-- Cambia esta imagen por una tuya -->
-    <meta property="og:image" content="https://tudominio.com/og-image.jpg" />
-  </head>
+        <!-- SEO básico / redes sociales -->
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content="website" />
+        <!-- Cambia esta URL por la real de tu dominio -->
+        <meta property="og:url" content="https://tudominio.com" />
+        <!-- Cambia esta imagen por una tuya -->
+        <meta
+            property="og:image"
+            content="https://tudominio.com/og-image.jpg"
+        />
+    </head>
 
-  <body class="bg-white text-slate-900 antialiased">
-        <header class="sticky top-0 z-20 border-b border-slate-200 bg-white/90 backdrop-blur">
-      <nav class="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
-        <a href="/" class="flex items-center gap-2">
-          <img src="/birdpedy-logo.svg" alt="BirdPedy" class="h-8 w-8" /> 
-          <span class="text-lg font-semibold tracking-tight">BirdPedy</span>
-        </a>
-
-        <div class="flex items-center gap-4 text-sm">
-          <a
-            href="#caracteristicas"
-            class="hidden text-slate-600 hover:text-slate-900 md:inline"
-          >
-            <span data-lang="es">Características</span>
-            <span data-lang="en">Features</span>
-          </a>
-          <a href="#novedades" class="hidden text-slate-600 hover:text-slate-900 md:inline">
-            <span data-lang="es">Novedades</span>
-            <span data-lang="en">What’s new</span>
-          </a>
-          <a
-            href="#como-funciona"
-            class="hidden text-slate-600 hover:text-slate-900 md:inline"
-          >
-            <span data-lang="es">Cómo funciona</span>
-            <span data-lang="en">How it works</span>
-          </a>
-          <a
-            href="#capturas"
-            class="hidden text-slate-600 hover:text-slate-900 md:inline"
-          >
-            <span data-lang="es">Capturas</span>
-            <span data-lang="en">Screenshots</span>
-          </a>
-          <a href="#faq" class="hidden text-slate-600 hover:text-slate-900 md:inline">
-            <span data-lang="es">FAQ</span>
-            <span data-lang="en">FAQ</span>
-          </a>
-
-          <!-- Toggle de idioma + botón Descargar -->
-          <div class="flex items-center gap-2">
-            <div class="flex rounded-full bg-slate-100 p-0.5 text-xs">
-              <button
-                type="button"
-                data-set-lang="es"
-                class="rounded-full px-2 py-1 text-slate-500 transition-colors"
-              >
-                ES
-              </button>
-              <button
-                type="button"
-                data-set-lang="en"
-                class="rounded-full px-2 py-1 text-slate-500 transition-colors"
-              >
-                EN
-              </button>
-            </div>
-
-            <a
-              href="https://play.google.com/store/apps/details?id=com.josemaxp.birdpedy&hl=es_419"
-              target="_blank"
-              rel="noreferrer"
-              class="inline-flex items-center gap-2 rounded-full bg-[#6F986B] px-4 py-1.5 text-xs font-medium text-white shadow-sm hover:bg-[#5F8360]"
+    <body class="bg-white text-slate-900 antialiased">
+        <header
+            class="sticky top-0 z-20 border-b border-slate-200 bg-white/90 backdrop-blur"
+        >
+            <nav
+                class="mx-auto flex max-w-5xl items-center justify-between px-4 py-3"
             >
-              <span data-lang="es">Descargar app</span>
-              <span data-lang="en">Download app</span>
-            </a>
-          </div>
-        </div>
-      </nav>
-    </header>
+                <a href="/" class="flex items-center gap-2">
+                    <img
+                        src="/birdpedy-logo.svg"
+                        alt="BirdPedy"
+                        class="h-8 w-8"
+                    />
+                    <span class="text-lg font-semibold tracking-tight"
+                        >BirdPedy</span
+                    >
+                </a>
 
-    <main>
-      <slot />
-    </main>
+                <div class="flex items-center gap-4 text-sm">
+                    <a
+                        href="#caracteristicas"
+                        class="hidden text-slate-600 hover:text-slate-900 md:inline"
+                    >
+                        <span data-lang="es">Características</span>
+                        <span data-lang="en">Features</span>
+                    </a>
+                    <a
+                        href="#novedades"
+                        class="hidden text-slate-600 hover:text-slate-900 md:inline"
+                    >
+                        <span data-lang="es">Novedades</span>
+                        <span data-lang="en">What’s new</span>
+                    </a>
+                    <a
+                        href="#como-funciona"
+                        class="hidden text-slate-600 hover:text-slate-900 md:inline"
+                    >
+                        <span data-lang="es">Cómo funciona</span>
+                        <span data-lang="en">How it works</span>
+                    </a>
+                    <a
+                        href="#capturas"
+                        class="hidden text-slate-600 hover:text-slate-900 md:inline"
+                    >
+                        <span data-lang="es">Capturas</span>
+                        <span data-lang="en">Screenshots</span>
+                    </a>
+                    <a
+                        href="#instagram"
+                        class="hidden text-slate-600 hover:text-slate-900 md:inline"
+                    >
+                        <span data-lang="es">Instagram</span>
+                        <span data-lang="en">Instagram</span>
+                    </a>
+                    <a
+                        href="#faq"
+                        class="hidden text-slate-600 hover:text-slate-900 md:inline"
+                    >
+                        <span data-lang="es">FAQ</span>
+                        <span data-lang="en">FAQ</span>
+                    </a>
 
-    <footer class="border-t border-slate-200 bg-white py-6">
-      <div
-        class="mx-auto flex max-w-5xl flex-col gap-2 px-4 text-sm text-slate-500 md:flex-row md:items-center md:justify-between"
-      >
-        <p>© {new Date().getFullYear()} BirdPedy. Todos los derechos reservados.</p>
-        <p>
-          <span data-lang="es">
-            Hecha para amantes del birding y la naturaleza en España.
-          </span>
-          <span data-lang="en">
-            Built for birders and nature lovers in Spain.
-          </span>
-        </p>
-      </div>
-    </footer>
+                    <!-- Toggle de idioma + botón Descargar -->
+                    <div class="flex items-center gap-2">
+                        <div
+                            class="flex rounded-full bg-slate-100 p-0.5 text-xs"
+                        >
+                            <button
+                                type="button"
+                                data-set-lang="es"
+                                class="rounded-full px-2 py-1 text-slate-500 transition-colors"
+                            >
+                                ES
+                            </button>
+                            <button
+                                type="button"
+                                data-set-lang="en"
+                                class="rounded-full px-2 py-1 text-slate-500 transition-colors"
+                            >
+                                EN
+                            </button>
+                        </div>
 
-    <!-- Script sencillo para cambiar idioma (ES/EN) y recordar la elección -->
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const STORAGE_KEY = 'birdpedy-lang';
-        const supported = ['es', 'en'];
+                        <a
+                            href="https://play.google.com/store/apps/details?id=com.josemaxp.birdpedy&hl=es_419"
+                            target="_blank"
+                            rel="noreferrer"
+                            class="inline-flex items-center gap-2 rounded-full bg-[#6F986B] px-4 py-1.5 text-xs font-medium text-white shadow-sm hover:bg-[#5F8360]"
+                        >
+                            <span data-lang="es">Descargar app</span>
+                            <span data-lang="en">Download app</span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
 
-        function applyLang(lang) {
-          if (!supported.includes(lang)) lang = 'es';
+        <main>
+            <slot />
+        </main>
 
-          const html = document.documentElement;
-          html.setAttribute('data-lang', lang);
-          html.setAttribute('lang', lang);
-          try {
-            localStorage.setItem(STORAGE_KEY, lang);
-          } catch (_) {}
+        <footer class="border-t border-slate-200 bg-white py-6">
+            <div
+                class="mx-auto flex max-w-5xl flex-col gap-2 px-4 text-sm text-slate-500 md:flex-row md:items-center md:justify-between"
+            >
+                <p>
+                    © {new Date().getFullYear()} BirdPedy. Todos los derechos reservados.
+                </p>
+                <p>
+                    <span data-lang="es">
+                        Hecha para amantes del birding y la naturaleza en
+                        España.
+                    </span>
+                    <span data-lang="en">
+                        Built for birders and nature lovers in Spain.
+                    </span>
+                </p>
+            </div>
+        </footer>
 
-          // Estilos activos del toggle
-          document.querySelectorAll('[data-set-lang]').forEach((btn) => {
-            const isActive = btn.getAttribute('data-set-lang') === lang;
-            btn.classList.toggle('bg-white', isActive);
-            btn.classList.toggle('text-slate-900', isActive);
-            btn.classList.toggle('shadow-sm', isActive);
-            btn.classList.toggle('text-slate-500', !isActive);
-          });
-        }
+        <!-- Script sencillo para cambiar idioma (ES/EN) y recordar la elección -->
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const STORAGE_KEY = "birdpedy-lang";
+                const supported = ["es", "en"];
 
-        const saved = (() => {
-          try {
-            return localStorage.getItem(STORAGE_KEY);
-          } catch {
-            return null;
-          }
-        })();
+                function applyLang(lang) {
+                    if (!supported.includes(lang)) lang = "es";
 
-        applyLang(saved || 'es');
+                    const html = document.documentElement;
+                    html.setAttribute("data-lang", lang);
+                    html.setAttribute("lang", lang);
+                    try {
+                        localStorage.setItem(STORAGE_KEY, lang);
+                    } catch (_) {}
 
-        document.querySelectorAll('[data-set-lang]').forEach((btn) => {
-          btn.addEventListener('click', () => {
-            const lang = btn.getAttribute('data-set-lang');
-            applyLang(lang);
-          });
-        });
-      });
-    </script>
-  </body>
+                    // Estilos activos del toggle
+                    document
+                        .querySelectorAll("[data-set-lang]")
+                        .forEach((btn) => {
+                            const isActive =
+                                btn.getAttribute("data-set-lang") === lang;
+                            btn.classList.toggle("bg-white", isActive);
+                            btn.classList.toggle("text-slate-900", isActive);
+                            btn.classList.toggle("shadow-sm", isActive);
+                            btn.classList.toggle("text-slate-500", !isActive);
+                        });
+                }
+
+                const saved = (() => {
+                    try {
+                        return localStorage.getItem(STORAGE_KEY);
+                    } catch {
+                        return null;
+                    }
+                })();
+
+                applyLang(saved || "es");
+
+                document.querySelectorAll("[data-set-lang]").forEach((btn) => {
+                    btn.addEventListener("click", () => {
+                        const lang = btn.getAttribute("data-set-lang");
+                        applyLang(lang);
+                    });
+                });
+            });
+        </script>
+    </body>
 </html>
