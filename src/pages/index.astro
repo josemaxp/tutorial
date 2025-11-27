@@ -72,11 +72,18 @@ const appJsonLd = {
 		id="inicio"
 		class="relative overflow-hidden bg-gradient-to-b from-[#E6F1E6] via-white to-white"
 	>
+		<!-- Halo de color detrás del mockup -->
 		<div
-			class="mx-auto flex max-w-5xl flex-col items-center gap-12 px-4 py-16 md:flex-row md:items-stretch md:py-20"
+			class="pointer-events-none absolute inset-y-0 right-[-10%] w-[60%] bg-[radial-gradient(circle_at_80%_20%,rgba(111,152,107,0.25),transparent_55%)]"
+			aria-hidden="true"
+		>
+		</div>
+
+		<div
+			class="relative mx-auto flex max-w-5xl flex-col items-center gap-12 px-4 py-16 md:flex-row md:items-center md:py-20"
 		>
 			<!-- Columna texto -->
-			<div class="w-full md:w-1/2 space-y-6">
+			<div class="w-full space-y-6 md:w-1/2">
 				<p
 					class="inline-flex items-center gap-2 rounded-full bg-[#6F986B]/10 px-3 py-1 text-xs font-medium text-[#44653F] ring-1 ring-[#6F986B]/40"
 				>
@@ -86,20 +93,24 @@ const appJsonLd = {
 				</p>
 
 				<h1
-					class="text-balance text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl"
+					class="text-balance text-3xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-5xl"
 				>
 					<span data-lang="es">
-						BirdPedy, tu compañera para observar y registrar aves en
-						España.
+						BirdPedy, tu compañera para
+						<span class="text-[#2F6B28]">
+							observar y registrar aves en España.
+						</span>
 					</span>
 					<span data-lang="en">
-						BirdPedy, your companion to spot and log birds across
-						Spain.
+						BirdPedy, your companion to
+						<span class="text-[#2F6B28]">
+							spot and log birds across Spain.
+						</span>
 					</span>
 				</h1>
 
 				<p
-					class="max-w-xl text-balance text-sm text-slate-600 sm:text-base"
+					class="max-w-lg text-balance text-sm text-slate-600 sm:text-base"
 				>
 					<span data-lang="es">
 						Descubre qué especies se ven cerca de ti, lleva un
@@ -113,6 +124,35 @@ const appJsonLd = {
 					</span>
 				</p>
 
+				<!-- Chips de beneficios clave -->
+				<div class="flex flex-wrap gap-2 text-xs text-slate-700">
+					<span
+						class="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white/70 px-3 py-1"
+					>
+						<span aria-hidden="true">📚</span>
+						<span data-lang="es"
+							>Base de datos de aves de España</span
+						>
+						<span data-lang="en">Spain bird species database</span>
+					</span>
+					<span
+						class="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white/70 px-3 py-1"
+					>
+						<span aria-hidden="true">📍</span>
+						<span data-lang="es">Mapa con iNaturalist y eBird</span>
+						<span data-lang="en"
+							>Map with iNaturalist & eBird data</span
+						>
+					</span>
+					<span
+						class="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white/70 px-3 py-1"
+					>
+						<span aria-hidden="true">🏆</span>
+						<span data-lang="es">Comunidad y logros</span>
+						<span data-lang="en">Community & achievements</span>
+					</span>
+				</div>
+
 				<div class="flex flex-wrap items-center gap-4">
 					<a
 						href={playStoreUrl}
@@ -120,6 +160,12 @@ const appJsonLd = {
 						rel="noreferrer"
 						class="inline-flex items-center justify-center gap-2 rounded-full bg-[#6F986B] px-6 py-2.5 text-sm font-semibold text-white shadow-md shadow-[#6F986B]/30 hover:bg-[#5F8360]"
 					>
+						<img
+							src="/android-logo.svg"
+							alt=""
+							class="h-4 w-4"
+							aria-hidden="true"
+						/>
 						<span data-lang="es">Descargar en Google Play</span>
 						<span data-lang="en">Get it on Google Play</span>
 					</a>
@@ -133,9 +179,7 @@ const appJsonLd = {
 					</a>
 				</div>
 
-				<div
-					class="flex flex-wrap items-center gap-4 text-xs text-slate-500"
-				>
+				<div class="flex flex-col gap-1 text-xs text-slate-500">
 					<p>
 						<span data-lang="es">
 							Registra tus avistamientos, gana logros y sigue tus
@@ -146,12 +190,18 @@ const appJsonLd = {
 							the species you’ve seen.
 						</span>
 					</p>
+
+					<p class="flex items-center gap-1">
+						<span data-lang="es">Disponible solo para Android.</span
+						>
+						<span data-lang="en">Available for Android only.</span>
+					</p>
 				</div>
 			</div>
 
 			<!-- Columna mockup -->
 			<div
-				class="relative w-full md:w-1/2 flex justify-center md:justify-end"
+				class="relative flex w-full justify-center md:w-1/2 md:justify-end"
 			>
 				<div
 					class="h-[420px] w-[230px] rounded-[2rem] border border-slate-200 bg-white p-3 shadow-2xl shadow-slate-300/60"
@@ -167,8 +217,9 @@ const appJsonLd = {
 					</div>
 				</div>
 
+				<!-- Recuadro como antes, pero anclado a la derecha -->
 				<div
-					class="absolute -left-6 bottom-10 hidden rounded-xl border border-[#6F986B]/40 bg-white px-3 py-2 text-xs text-slate-800 shadow-lg shadow-[#6F986B]/15 sm:block"
+					class="absolute -right-10 bottom-6 hidden max-w-xs rounded-xl border border-[#6F986B]/40 bg-white px-4 py-3 text-xs text-slate-800 shadow-lg shadow-[#6F986B]/15 sm:block"
 				>
 					<p class="font-semibold text-[#44653F]">
 						<span data-lang="es">Observaciones cerca de ti</span>
@@ -219,17 +270,26 @@ const appJsonLd = {
 			</div>
 
 			<div class="mt-10 grid gap-8 md:grid-cols-3">
+				<!-- 1. Base de datos completa de aves -->
 				<article
 					class="flex flex-col gap-3 rounded-2xl border border-slate-200 bg-slate-50/60 p-5"
 				>
-					<h3 class="text-sm font-semibold text-slate-900">
-						<span data-lang="es"
-							>Base de datos completa de aves</span
+					<div class="flex items-center gap-3">
+						<div
+							class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#6F986B]/10 text-lg"
 						>
-						<span data-lang="en"
-							>Complete bird species database</span
-						>
-					</h3>
+							<span aria-hidden="true">📚</span>
+						</div>
+						<h3 class="text-sm font-semibold text-slate-900">
+							<span data-lang="es"
+								>Base de datos completa de aves</span
+							>
+							<span data-lang="en"
+								>Complete bird species database</span
+							>
+						</h3>
+					</div>
+
 					<p class="text-sm text-slate-600">
 						<span data-lang="es">
 							Consulta todas las especies que pueden verse o han
@@ -244,15 +304,24 @@ const appJsonLd = {
 					</p>
 				</article>
 
+				<!-- 2. Registro detallado de avistamientos -->
 				<article
 					class="flex flex-col gap-3 rounded-2xl border border-slate-200 bg-slate-50/60 p-5"
 				>
-					<h3 class="text-sm font-semibold text-slate-900">
-						<span data-lang="es"
-							>Registro detallado de avistamientos</span
+					<div class="flex items-center gap-3">
+						<div
+							class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#6F986B]/10 text-lg"
 						>
-						<span data-lang="en">Detailed sighting log</span>
-					</h3>
+							<span aria-hidden="true">📝</span>
+						</div>
+						<h3 class="text-sm font-semibold text-slate-900">
+							<span data-lang="es"
+								>Registro detallado de avistamientos</span
+							>
+							<span data-lang="en">Detailed sighting log</span>
+						</h3>
+					</div>
+
 					<p class="text-sm text-slate-600">
 						<span data-lang="es">
 							Guarda cuándo, dónde y cuántos individuos has visto.
@@ -267,13 +336,24 @@ const appJsonLd = {
 					</p>
 				</article>
 
+				<!-- 3. Comunidad y logros -->
 				<article
 					class="flex flex-col gap-3 rounded-2xl border border-slate-200 bg-slate-50/60 p-5"
 				>
-					<h3 class="text-sm font-semibold text-slate-900">
-						<span data-lang="es">Comunidad y logros</span>
-						<span data-lang="en">Community and achievements</span>
-					</h3>
+					<div class="flex items-center gap-3">
+						<div
+							class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#6F986B]/10 text-lg"
+						>
+							<span aria-hidden="true">🏆</span>
+						</div>
+						<h3 class="text-sm font-semibold text-slate-900">
+							<span data-lang="es">Comunidad y logros</span>
+							<span data-lang="en"
+								>Community and achievements</span
+							>
+						</h3>
+					</div>
+
 					<p class="text-sm text-slate-600">
 						<span data-lang="es">
 							Haz amistades, sigue a otros usuarios y consigue
@@ -916,17 +996,29 @@ const appJsonLd = {
 				</span>
 			</p>
 
-			<div class="mt-8 flex justify-center">
-				<a
-					href={playStoreUrl}
-					target="_blank"
-					rel="noreferrer"
-					class="inline-flex items-center justify-center gap-2 rounded-full bg-[#6F986B] px-8 py-3 text-sm font-semibold text-white shadow-md shadow-[#6F986B]/30 hover:bg-[#5F8360]"
+			<a
+				href={playStoreUrl}
+				target="_blank"
+				rel="noreferrer"
+				class="inline-flex items-center justify-center gap-2 rounded-full bg-[#6F986B] px-8 py-3 text-sm font-semibold text-white shadow-md shadow-[#6F986B]/30 hover:bg-[#5F8360]"
+			>
+				<img
+					src="/android-logo.svg"
+					alt=""
+					class="h-4 w-4"
+					aria-hidden="true"
+				/>
+				<span data-lang="es">Descargar en Google Play</span>
+				<span data-lang="en">Get it on Google Play</span>
+			</a>
+			<p class="mt-2 text-xs text-slate-500">
+				<span data-lang="es"
+					>Disponible actualmente solo para dispositivos Android.</span
 				>
-					<span data-lang="es">Descargar en Google Play</span>
-					<span data-lang="en">Get it on Google Play</span>
-				</a>
-			</div>
+				<span data-lang="en"
+					>Currently available for Android devices only.</span
+				>
+			</p>
 		</div>
 	</section>
 
