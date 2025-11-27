@@ -1,16 +1,648 @@
 ---
+import Layout from '../layouts/Layout.astro';
 
+const playStoreUrl =
+  'https://play.google.com/store/apps/details?id=com.josemaxp.birdpedy&hl=es_419';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		  <h1>My Astro Site</h1>
-	</body>
-</html>
+<Layout
+  title="BirdPedy – Birding en España | Observa y registra aves"
+  description="Descubre qué aves se ven en España, registra tus avistamientos y conecta con otros birders con BirdPedy."
+>
+  <!-- HERO -->
+  <section
+    id="inicio"
+    class="relative overflow-hidden bg-gradient-to-b from-[#E6F1E6] via-white to-white"
+  >
+    <div
+      class="mx-auto grid max-w-5xl items-center gap-12 px-4 py-16 md:py-20 lg:grid-cols-[minmax(0,1.3fr),minmax(0,1fr)]"
+    >
+      <div class="space-y-6">
+        <p
+          class="inline-flex items-center gap-2 rounded-full bg-[#6F986B]/10 px-3 py-1 text-xs font-medium text-[#44653F] ring-1 ring-[#6F986B]/40"
+        >
+          <span data-lang="es">Pensada para el birding en España</span>
+          <span data-lang="en">Designed for birding in Spain</span>
+        </p>
+
+        <h1
+          class="text-balance text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl"
+        >
+          <span data-lang="es">
+            BirdPedy, tu compañera para observar y registrar aves en España.
+          </span>
+          <span data-lang="en">
+            BirdPedy, your companion to spot and log birds across Spain.
+          </span>
+        </h1>
+
+        <p class="max-w-xl text-balance text-sm text-slate-600 sm:text-base">
+          <span data-lang="es">
+            Descubre qué especies se ven cerca de ti, lleva un registro detallado de tus
+            avistamientos y conecta con otros aficionados y ornitólogos. Todo en una sola app.
+          </span>
+          <span data-lang="en">
+            See which species are being spotted near you, keep a detailed log of your sightings,
+            and connect with fellow birders and ornithologists. All in one app.
+          </span>
+        </p>
+
+        <div class="flex flex-wrap items-center gap-4">
+          <a
+            href={playStoreUrl}
+            target="_blank"
+            rel="noreferrer"
+            class="inline-flex items-center justify-center gap-2 rounded-full bg-[#6F986B] px-6 py-2.5 text-sm font-semibold text-white shadow-md shadow-[#6F986B]/30 hover:bg-[#5F8360]"
+          >
+            <span data-lang="es">Descargar en Google Play</span>
+            <span data-lang="en">Get it on Google Play</span>
+          </a>
+
+          <a
+            href="#caracteristicas"
+            class="inline-flex items-center justify-center rounded-full border border-slate-300 px-5 py-2 text-sm font-medium text-slate-700 hover:border-slate-400 hover:bg-slate-50"
+          >
+            <span data-lang="es">Ver características</span>
+            <span data-lang="en">View features</span>
+          </a>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-4 text-xs text-slate-500">
+          <p>
+            <span data-lang="es">
+              Registra tus avistamientos, gana logros y sigue tus especies vistas.
+            </span>
+            <span data-lang="en">
+              Log your sightings, earn achievements, and track all the species you’ve seen.
+            </span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Mockup / captura de pantalla -->
+      <div class="relative">
+        <div
+          class="mx-auto h-[420px] w-[230px] rounded-[2rem] border border-slate-200 bg-white p-3 shadow-2xl shadow-slate-300/60"
+        >
+          <div class="h-full w-full overflow-hidden rounded-[1.5rem] bg-slate-100">
+            <!-- Sustituye esta imagen por una captura real en /public -->
+            <!-- Ejemplo: /public/birdpedy-screenshot-1.jpg -->
+            <img
+              src="/birdpedy-screenshot-1.jpg"
+              alt="Pantalla principal de la app BirdPedy"
+              class="h-full w-full object-cover"
+            />
+          </div>
+        </div>
+
+        <div
+          class="absolute -left-6 bottom-10 hidden rounded-xl border border-[#6F986B]/40 bg-white px-3 py-2 text-xs text-slate-800 shadow-lg shadow-[#6F986B]/15 sm:block"
+        >
+          <p class="font-semibold text-[#44653F]">
+            <span data-lang="es">Observaciones cerca de ti</span>
+            <span data-lang="en">Sightings near you</span>
+          </p>
+          <p class="text-slate-600">
+            <span data-lang="es">
+              Consulta en el mapa avistamientos recientes de iNaturalist y eBird.
+            </span>
+            <span data-lang="en">
+              Check recent iNaturalist and eBird observations on the map in real time.
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARACTERÍSTICAS PRINCIPALES -->
+  <section id="caracteristicas" class="bg-white py-16 sm:py-20">
+    <div class="mx-auto max-w-5xl px-4">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
+          <span data-lang="es">
+            Todo lo que necesitas para disfrutar del birding en España.
+          </span>
+          <span data-lang="en">
+            Everything you need to enjoy birding across Spain.
+          </span>
+        </h2>
+        <p class="mt-3 text-sm text-slate-600 sm:text-base">
+          <span data-lang="es">
+            BirdPedy combina información de calidad, herramientas de observación y comunidad para
+            acompañarte en cada salida al campo.
+          </span>
+          <span data-lang="en">
+            BirdPedy brings together high‑quality data, observation tools, and community features to
+            support you on every birding trip.
+          </span>
+        </p>
+      </div>
+
+      <div class="mt-10 grid gap-8 md:grid-cols-3">
+        <article
+          class="flex flex-col gap-3 rounded-2xl border border-slate-200 bg-slate-50/60 p-5"
+        >
+          <h3 class="text-sm font-semibold text-slate-900">
+            <span data-lang="es">Base de datos completa de aves</span>
+            <span data-lang="en">Complete bird species database</span>
+          </h3>
+          <p class="text-sm text-slate-600">
+            <span data-lang="es">
+              Consulta todas las especies que pueden verse o han sido avistadas en España, con
+              fotos, descripciones, rareza, hábitat y comportamiento.
+            </span>
+            <span data-lang="en">
+              Explore all species that can be seen or have been recorded in Spain, with photos,
+              descriptions, rarity, habitat, and behaviour.
+            </span>
+          </p>
+        </article>
+
+        <article
+          class="flex flex-col gap-3 rounded-2xl border border-slate-200 bg-slate-50/60 p-5"
+        >
+          <h3 class="text-sm font-semibold text-slate-900">
+            <span data-lang="es">Registro detallado de avistamientos</span>
+            <span data-lang="en">Detailed sighting log</span>
+          </h3>
+          <p class="text-sm text-slate-600">
+            <span data-lang="es">
+              Guarda cuándo, dónde y cuántos individuos has visto. Publica tus avistamientos y
+              explora los registros de la comunidad.
+            </span>
+            <span data-lang="en">
+              Record when, where, and how many individuals you’ve seen. Share your sightings and
+              explore what the community is recording.
+            </span>
+          </p>
+        </article>
+
+        <article
+          class="flex flex-col gap-3 rounded-2xl border border-slate-200 bg-slate-50/60 p-5"
+        >
+          <h3 class="text-sm font-semibold text-slate-900">
+            <span data-lang="es">Comunidad y logros</span>
+            <span data-lang="en">Community and achievements</span>
+          </h3>
+          <p class="text-sm text-slate-600">
+            <span data-lang="es">
+              Haz amistades, sigue a otros usuarios y consigue logros por tus observaciones y
+              participación en la comunidad.
+            </span>
+            <span data-lang="en">
+              Make friends, follow other users, and earn achievements for your observations and
+              contributions to the community.
+            </span>
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOVEDADES DESTACADAS -->
+  <section id="novedades" class="border-y border-slate-200 bg-slate-50 py-16 sm:py-20">
+    <div class="mx-auto max-w-5xl px-4">
+      <div class="grid gap-10 lg:grid-cols-[minmax(0,1.1fr),minmax(0,1fr)]">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#6F986B]">
+            <span data-lang="es">Novedades</span>
+            <span data-lang="en">What’s new</span>
+          </p>
+          <h2 class="mt-2 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
+            <span data-lang="es">
+              Datos en tiempo real para planificar mejor tus salidas.
+            </span>
+            <span data-lang="en">
+              Real‑time data to plan your birding trips better.
+            </span>
+          </h2>
+          <p class="mt-3 text-sm text-slate-600 sm:text-base">
+            <span data-lang="es">
+              BirdPedy integra categorías de rareza y observaciones recientes para que puedas
+              valorar cada especie que ves y decidir dónde ir.
+            </span>
+            <span data-lang="en">
+              BirdPedy combines rarity categories and recent observations so you can value every
+              species you see and decide where to go next.
+            </span>
+          </p>
+        </div>
+
+        <div class="space-y-5">
+          <article class="rounded-2xl border border-slate-200 bg-white p-4">
+            <h3 class="text-sm font-semibold text-slate-900">
+              <span data-lang="es">Categorías de rareza de aves en España</span>
+              <span data-lang="en">Rarity categories for birds in Spain</span>
+            </h3>
+            <p class="mt-1 text-sm text-slate-600">
+              <span data-lang="es">
+                Cada especie incluye su categoría de presencia en España: común, poco común, rara,
+                épica o legendaria. Ideal para entender la frecuencia de avistamiento y dar más
+                valor a tus registros.
+              </span>
+              <span data-lang="en">
+                Each species includes a rarity level in Spain: common, uncommon, rare, epic, or
+                legendary. Perfect to understand how frequent a sighting is and give more weight to
+                your records.
+              </span>
+            </p>
+          </article>
+
+          <article class="rounded-2xl border border-slate-200 bg-white p-4">
+            <h3 class="text-sm font-semibold text-slate-900">
+              <span data-lang="es">Observaciones de iNaturalist y eBird en tiempo real</span>
+              <span data-lang="en">Live iNaturalist and eBird observations</span>
+            </h3>
+            <p class="mt-1 text-sm text-slate-600">
+              <span data-lang="es">
+                Consulta en el mapa los avistamientos recientes (desde hoy hasta hace una semana)
+                para ver qué aves se están viendo cerca de ti y organizar salidas más eficientes.
+              </span>
+              <span data-lang="en">
+                Check the map for recent sightings (from today up to a week ago) to see which birds
+                are being spotted near you and plan more efficient trips.
+              </span>
+            </p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO FUNCIONA -->
+  <section id="como-funciona" class="bg-white py-16 sm:py-20">
+    <div class="mx-auto max-w-5xl px-4">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
+          <span data-lang="es">Cómo usar BirdPedy en tus salidas.</span>
+          <span data-lang="en">How to use BirdPedy on your trips.</span>
+        </h2>
+        <p class="mt-3 text-sm text-slate-600 sm:text-base">
+          <span data-lang="es">
+            Tanto si estás empezando como si eres un ornitólogo experimentado, BirdPedy se adapta a
+            tu forma de pajarear.
+          </span>
+          <span data-lang="en">
+            Whether you’re just starting or you’re an experienced birder, BirdPedy adapts to your
+            way of birding.
+          </span>
+        </p>
+      </div>
+
+      <div class="mt-10 grid gap-8 md:grid-cols-3">
+        <div class="flex flex-col gap-3">
+          <div
+            class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#6F986B] text-sm font-semibold text-white"
+          >
+            1
+          </div>
+          <h3 class="text-sm font-semibold text-slate-900">
+            <span data-lang="es">Explora especies y zonas</span>
+            <span data-lang="en">Explore species and hotspots</span>
+          </h3>
+          <p class="text-sm text-slate-600">
+            <span data-lang="es">
+              Antes de salir, consulta qué especies se ven en España y los avistamientos recientes
+              cerca de tu ubicación.
+            </span>
+            <span data-lang="en">
+              Before you go out, check which species can be seen in Spain and recent sightings near
+              your location.
+            </span>
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <div
+            class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#6F986B] text-sm font-semibold text-white"
+          >
+            2
+          </div>
+          <h3 class="text-sm font-semibold text-slate-900">
+            <span data-lang="es">Registra tus avistamientos</span>
+            <span data-lang="en">Log your sightings</span>
+          </h3>
+          <p class="text-sm text-slate-600">
+            <span data-lang="es">
+              Durante la salida, anota cada ave vista: especie, número de individuos, localización y
+              notas relevantes.
+            </span>
+            <span data-lang="en">
+              While you’re out, log each bird you see: species, number of individuals, location,
+              and notes.
+            </span>
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <div
+            class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#6F986B] text-sm font-semibold text-white"
+          >
+            3
+          </div>
+          <h3 class="text-sm font-semibold text-slate-900">
+            <span data-lang="es">Revisa tu historial y gana logros</span>
+            <span data-lang="en">Review your history and earn badges</span>
+          </h3>
+          <p class="text-sm text-slate-600">
+            <span data-lang="es">
+              Consulta tu lista de especies vistas, comparte con la comunidad y completa desafíos
+              para desbloquear logros.
+            </span>
+            <span data-lang="en">
+              Review your life list, share with the community, and complete challenges to unlock
+              achievements.
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- CAPTURAS / SCREENSHOTS -->
+  <section id="capturas" class="bg-slate-50 py-16 sm:py-20">
+    <div class="mx-auto max-w-5xl px-4">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
+          <span data-lang="es">Echa un vistazo a BirdPedy en acción.</span>
+          <span data-lang="en">Take a look at BirdPedy in action.</span>
+        </h2>
+        <p class="mt-3 text-sm text-slate-600 sm:text-base">
+          <span data-lang="es">
+            Estas capturas corresponden a la versión actual de la app para Android. Desliza
+            horizontalmente para ver más pantallas.
+          </span>
+          <span data-lang="en">
+            These screenshots showcase the current Android version of the app. Swipe horizontally to
+            explore more screens.
+          </span>
+        </p>
+      </div>
+
+      <!-- Capturas en español -->
+      <div data-lang="es" class="mt-10 space-y-3">
+        <p class="text-xs text-slate-500">
+          Las imágenes continúan un mismo fondo, igual que en Google Play.
+        </p>
+        <div class="flex gap-4 overflow-x-auto pb-2">
+          <img
+            src="/screens-es-1.jpg"
+            alt="Pantalla de inicio de BirdPedy en español"
+            class="h-72 w-auto shrink-0 rounded-2xl border border-slate-200 bg-white object-cover shadow-md shadow-slate-300/40"
+          />
+          <img
+            src="/screens-es-2.jpg"
+            alt="Listado de aves en BirdPedy en español"
+            class="h-72 w-auto shrink-0 rounded-2xl border border-slate-200 bg-white object-cover shadow-md shadow-slate-300/40"
+          />
+          <img
+            src="/screens-es-3.jpg"
+            alt="Detalle de especie en BirdPedy en español"
+            class="h-72 w-auto shrink-0 rounded-2xl border border-slate-200 bg-white object-cover shadow-md shadow-slate-300/40"
+          />
+          <img
+            src="/screens-es-4.jpg"
+            alt="Mapa de avistamientos en BirdPedy en español"
+            class="h-72 w-auto shrink-0 rounded-2xl border border-slate-200 bg-white object-cover shadow-md shadow-slate-300/40"
+          />
+          <img
+            src="/screens-es-5.jpg"
+            alt="Estadísticas y logros en BirdPedy en español"
+            class="h-72 w-auto shrink-0 rounded-2xl border border-slate-200 bg-white object-cover shadow-md shadow-slate-300/40"
+          />
+          <img
+            src="/screens-es-6.jpg"
+            alt="Perfil y comunidad en BirdPedy en español"
+            class="h-72 w-auto shrink-0 rounded-2xl border border-slate-200 bg-white object-cover shadow-md shadow-slate-300/40"
+          />
+        </div>
+      </div>
+
+      <!-- Capturas en inglés -->
+      <div data-lang="en" class="mt-10 space-y-3">
+        <p class="text-xs text-slate-500">
+          Screens share a continuous background, just like on Google Play.
+        </p>
+        <div class="flex gap-4 overflow-x-auto pb-2">
+          <img
+            src="/screens-en-1.jpg"
+            alt="BirdPedy home screen in English"
+            class="h-72 w-auto shrink-0 rounded-2xl border border-slate-200 bg-white object-cover shadow-md shadow-slate-300/40"
+          />
+          <img
+            src="/screens-en-2.jpg"
+            alt="Bird list in BirdPedy in English"
+            class="h-72 w-auto shrink-0 rounded-2xl border border-slate-200 bg-white object-cover shadow-md shadow-slate-300/40"
+          />
+          <img
+            src="/screens-en-3.jpg"
+            alt="Species detail in BirdPedy in English"
+            class="h-72 w-auto shrink-0 rounded-2xl border border-slate-200 bg-white object-cover shadow-md shadow-slate-300/40"
+          />
+          <img
+            src="/screens-en-4.jpg"
+            alt="Sightings map in BirdPedy in English"
+            class="h-72 w-auto shrink-0 rounded-2xl border border-slate-200 bg-white object-cover shadow-md shadow-slate-300/40"
+          />
+          <img
+            src="/screens-en-5.jpg"
+            alt="Statistics and achievements in BirdPedy in English"
+            class="h-72 w-auto shrink-0 rounded-2xl border border-slate-200 bg-white object-cover shadow-md shadow-slate-300/40"
+          />
+          <img
+            src="/screens-en-6.jpg"
+            alt="Profile and community in BirdPedy in English"
+            class="h-72 w-auto shrink-0 rounded-2xl border border-slate-200 bg-white object-cover shadow-md shadow-slate-300/40"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ / PREGUNTAS FRECUENTES -->
+  <section id="faq" class="bg-white py-16 sm:py-20">
+    <div class="mx-auto max-w-5xl px-4">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
+          <span data-lang="es">Preguntas frecuentes sobre BirdPedy.</span>
+          <span data-lang="en">Frequently asked questions about BirdPedy.</span>
+        </h2>
+        <p class="mt-3 text-sm text-slate-600 sm:text-base">
+          <span data-lang="es">
+            Resolvemos algunas dudas habituales sobre la app, su enfoque y cómo se usan los datos de
+            avistamientos.
+          </span>
+          <span data-lang="en">
+            Here are some common questions about the app, its focus, and how sighting data is used.
+          </span>
+        </p>
+      </div>
+
+      <div class="mt-10 space-y-4">
+        <!-- FAQ 1 -->
+        <details class="group rounded-2xl border border-slate-200 bg-slate-50 p-4">
+          <summary
+            class="flex cursor-pointer items-center justify-between gap-4 text-sm font-medium text-slate-900"
+          >
+            <span>
+              <span data-lang="es">¿En qué zona está pensada BirdPedy?</span>
+              <span data-lang="en">Which region is BirdPedy designed for?</span>
+            </span>
+            <span
+              class="text-slate-400 transition-transform group-open:rotate-45"
+              aria-hidden="true"
+            >
+              +
+            </span>
+          </summary>
+          <div class="mt-2 text-sm text-slate-600">
+            <p data-lang="es">
+              BirdPedy está centrada en las aves que pueden verse o han sido avistadas en España.
+              Toda la base de datos, las categorías de rareza y las observaciones en tiempo real
+              están optimizadas para el territorio español.
+            </p>
+            <p data-lang="en">
+              BirdPedy focuses on bird species that can be seen or have been recorded in Spain. The
+              entire database, rarity categories, and live observations are optimised for Spanish
+              territory.
+            </p>
+          </div>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details class="group rounded-2xl border border-slate-200 bg-slate-50 p-4">
+          <summary
+            class="flex cursor-pointer items-center justify-between gap-4 text-sm font-medium text-slate-900"
+          >
+            <span>
+              <span data-lang="es">
+                ¿De dónde proceden las observaciones en tiempo real del mapa?
+              </span>
+              <span data-lang="en">
+                Where do the live observations on the map come from?
+              </span>
+            </span>
+            <span
+              class="text-slate-400 transition-transform group-open:rotate-45"
+              aria-hidden="true"
+            >
+              +
+            </span>
+          </summary>
+          <div class="mt-2 text-sm text-slate-600">
+            <p data-lang="es">
+              BirdPedy integra avistamientos recientes de proyectos de ciencia ciudadana como
+              iNaturalist y eBird, permitiéndote ver qué especies se están observando cerca de ti
+              entre hoy y hace una semana.
+            </p>
+            <p data-lang="en">
+              BirdPedy pulls in recent sightings from citizen‑science platforms such as iNaturalist
+              and eBird, so you can see which species are being recorded near you from today up to a
+              week ago.
+            </p>
+          </div>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details class="group rounded-2xl border border-slate-200 bg-slate-50 p-4">
+          <summary
+            class="flex cursor-pointer items-center justify-between gap-4 text-sm font-medium text-slate-900"
+          >
+            <span>
+              <span data-lang="es">
+                ¿Necesito experiencia previa en ornitología para usar BirdPedy?
+              </span>
+              <span data-lang="en">
+                Do I need birding experience to use BirdPedy?
+              </span>
+            </span>
+            <span
+              class="text-slate-400 transition-transform group-open:rotate-45"
+              aria-hidden="true"
+            >
+              +
+            </span>
+          </summary>
+          <div class="mt-2 text-sm text-slate-600">
+            <p data-lang="es">
+              No. BirdPedy está pensada tanto para personas que empiezan en el birding como para
+              observadores experimentados. La app incluye descripciones, fotos y características
+              identificativas para ayudarte a aprender poco a poco.
+            </p>
+            <p data-lang="en">
+              No. BirdPedy is designed both for beginners and experienced birders. The app includes
+              descriptions, photos, and ID tips so you can learn at your own pace.
+            </p>
+          </div>
+        </details>
+
+        <!-- FAQ 4 -->
+        <details class="group rounded-2xl border border-slate-200 bg-slate-50 p-4">
+          <summary
+            class="flex cursor-pointer items-center justify-between gap-4 text-sm font-medium text-slate-900"
+          >
+            <span>
+              <span data-lang="es">
+                ¿Cómo ayuda BirdPedy a la conservación de las aves?
+              </span>
+              <span data-lang="en">
+                How does BirdPedy help bird conservation?
+              </span>
+            </span>
+            <span
+              class="text-slate-400 transition-transform group-open:rotate-45"
+              aria-hidden="true"
+            >
+              +
+            </span>
+          </summary>
+          <div class="mt-2 text-sm text-slate-600">
+            <p data-lang="es">
+              Al animarte a registrar tus avistamientos y participar en actividades y proyectos,
+              BirdPedy te conecta con iniciativas que promueven el cuidado y la conservación de la
+              avifauna en España.
+            </p>
+            <p data-lang="en">
+              By encouraging you to log your sightings and take part in activities and projects,
+              BirdPedy connects you with initiatives that promote the care and conservation of
+              Spain’s birdlife.
+            </p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section id="descargar" class="border-t border-slate-200 bg-[#F4F7F4] py-16 sm:py-20">
+    <div class="mx-auto max-w-5xl px-4 text-center">
+      <h2 class="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
+        <span data-lang="es">Empieza hoy mismo a registrar tus avistamientos.</span>
+        <span data-lang="en">Start logging your bird sightings today.</span>
+      </h2>
+      <p class="mt-3 text-sm text-slate-600 sm:text-base">
+        <span data-lang="es">
+          Descarga BirdPedy y únete a una comunidad que disfruta de la naturaleza mientras contribuye
+          al conocimiento y protección de las aves en España.
+        </span>
+        <span data-lang="en">
+          Download BirdPedy and join a community that enjoys nature while helping protect and
+          document Spain’s birdlife.
+        </span>
+      </p>
+
+      <div class="mt-8 flex justify-center">
+        <a
+          href={playStoreUrl}
+          target="_blank"
+          rel="noreferrer"
+          class="inline-flex items-center justify-center gap-2 rounded-full bg-[#6F986B] px-8 py-3 text-sm font-semibold text-white shadow-md shadow-[#6F986B]/30 hover:bg-[#5F8360]"
+        >
+          <span data-lang="es">Descargar en Google Play</span>
+          <span data-lang="en">Get it on Google Play</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

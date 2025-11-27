@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+/* Mostrar solo el idioma activo */
+html[data-lang='es'] [data-lang='en'],
+html[data-lang='en'] [data-lang='es'] {
+  display: none;
+}
